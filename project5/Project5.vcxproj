@@ -69,7 +69,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(DX_LIB);$(SolutionDir);$(SolutionDir)\comon;$(SolutionDir)\_debug;$(SolutionDir)\Input;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(DX_LIB);$(SolutionDir);$(SolutionDir)\comon;$(SolutionDir)\_debug;$(SolutionDir)\Input;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -115,6 +120,41 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bullet.cpp" />
+    <ClCompile Include="comon\ImageMng.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyMove.cpp" />
+    <ClCompile Include="Input\InputID.cpp" />
+    <ClCompile Include="Input\InputState.cpp" />
+    <ClCompile Include="Input\KeyState.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Obj.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Scene\BaseScene.cpp" />
+    <ClCompile Include="Scene\GameScene.cpp" />
+    <ClCompile Include="Scene\SceneMng.cpp" />
+    <ClCompile Include="Scene\TitleScene.cpp" />
+    <ClCompile Include="_debug\_DebugDispOut.cpp" />
+    <ClCompile Include="_debug\_DubugConOut.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bullet.h" />
+    <ClInclude Include="comon\details\Vector2.h" />
+    <ClInclude Include="comon\ImageMng.h" />
+    <ClInclude Include="comon\Vector2.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyMove.h" />
+    <ClInclude Include="Input\InputID.h" />
+    <ClInclude Include="Input\InputState.h" />
+    <ClInclude Include="Input\KeyState.h" />
+    <ClInclude Include="Obj.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Scene\BaseScene.h" />
+    <ClInclude Include="Scene\GameScene.h" />
+    <ClInclude Include="Scene\SceneMng.h" />
+    <ClInclude Include="Scene\TitleScene.h" />
+    <ClInclude Include="_debug\_DebugDispOut.h" />
+    <ClInclude Include="_debug\_DubugConOut.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

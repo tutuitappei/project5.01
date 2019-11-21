@@ -10,7 +10,7 @@ bullet::bullet(Vector2db pos)
 {
 }
 
-void bullet::Update(void)
+void bullet::Updata(void)
 {
 }
 

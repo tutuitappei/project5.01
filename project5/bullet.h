@@ -6,7 +6,7 @@ class bullet :
 public:
 	bullet();
 	bullet(Vector2db pos);
-	void Update(void) override;
+	void Updata(void) override;
 	~bullet();
 private:
 	int Init();
