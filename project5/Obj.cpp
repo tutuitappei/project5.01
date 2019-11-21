@@ -1,7 +1,8 @@
-#include <DxLib.h>
-#include <SceneMng.h>
-#include <ImageMng.h>
-#include <Obj.h>
+#include<Dxlib.h>
+#include "Obj.h"
+#include<map>
+#include"comon\ImageMng.h"
+#include"Scene\SceneMag.h"
 
 Obj::Obj()
 {

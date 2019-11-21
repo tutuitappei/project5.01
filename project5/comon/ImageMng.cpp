@@ -1,5 +1,5 @@
 #include "ImageMng.h"
-#include <DxLib.h>
+#include <Dxlib.h>
 
 
 //ImageMng* ImageMng::sInstance = nullptr;
